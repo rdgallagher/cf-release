@@ -23,6 +23,9 @@ properties:
   router.requested_route_registration_interval_in_seconds:
     description: "Interval at which the router requests routes to be registered."
     default: 20
+  router.debug_addr:
+    description: "address at which to serve debug info"
+    default: "0.0.0.0:17001"
   nats.user:
     description:
   nats.password:
