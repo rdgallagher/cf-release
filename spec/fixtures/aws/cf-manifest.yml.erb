@@ -872,6 +872,12 @@ properties:
         authorities: scim.userids
         secret: cloud_controller_username_lookup_secret
         authorized-grant-types: client_credentials
+      identity:
+        authorities: zones.create,scim.zones
+        authorized-grant-types: authorization_code,client_credentials,refresh_token,password
+        autoapprove: true
+        scope: zones.*.admin,openid,clients.read,clients.write,clients.secret,clients.admin
+        secret: identity-secret
     internal_hostnames: localhost,uaa.example.com,login.example.com
     jwt:
       signing_key: sk
